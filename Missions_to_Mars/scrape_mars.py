@@ -20,7 +20,7 @@ def scrape():
     news_url = "https://mars.nasa.gov/news/"
     # Visit the URL using splinter 
     browser.visit(news_url)
-    time.sleep(2)
+    # time.sleep(1)
     # Create HTML object
     html = browser.html
     # Parse HTML with Beautiful Soup
@@ -36,7 +36,7 @@ def scrape():
     featured_img_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     # Initiate browser to visit the URL
     browser.visit(featured_img_url)
-    time.sleep(2)
+    # time.sleep(1)
     # Click the 'FULL IMAGE' button on the page
     browser.click_link_by_partial_text("FULL IMAGE")
     # Click the 'more info' button on the page
@@ -68,15 +68,15 @@ def scrape():
     # Set the index to the 'Description' column
     mars_df = df.set_index(["Description"])
     # Generate HTML tables from the DataFrame
-    mars_facts_html = mars_df.to_html()
+    mars_facts_html = mars_df.to_html(header = False, index = False)
     # Strip unwanted '/n' tags to clean up the table
-    mars_facts_html = mars_facts_html.replace('\n', '')
+    # mars_facts_html = mars_facts_html.replace('\n', '')
 
     # MARS HEMISPHERE
     # Set the featured image url and browser
     mars_hemi_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(mars_hemi_url)
-    time.sleep(2)
+    # time.sleep(1)
     # Created HTML object
     mars_html = browser.html
     # Parse HTML with Beautiful Soup
@@ -101,7 +101,7 @@ def scrape():
     final_dict["news_title"] = news_title
     final_dict["news_p"] = news_p
     final_dict["featured_image_url"] = featured_image_url
-    final_dict["mars_facts"] = mars_df
+    final_dict["mars_facts"] = mars_facts_html
     final_dict["hemisphere_image_urls"] = hemisphere_image_urls
     
     browser.quit()
