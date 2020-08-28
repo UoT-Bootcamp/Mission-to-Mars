@@ -5,13 +5,16 @@ from splinter import Browser
 import pandas as pd
 import time
 
+def init_browser():
+    # @NOTE: Replace the path with your actual path to the chromedriver
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+    return Browser("chrome", **executable_path, headless=False)
+
 
 def scrape():
-    # Initiate splinter
-    !which chromedriver
-    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
-    browser = Browser('chrome', **executable_path, headless=False)
 
+    browser = init_browser()
+    final_dict = {}
     # NASA MARS NEWS
     # Set the featured image url and browser
     news_url = "https://mars.nasa.gov/news/"
@@ -95,10 +98,12 @@ def scrape():
                      "img_url" : img_url}
         hemisphere_image_urls.append(hemi_info_dict)
 
-    final_dict = {"news_title" : news_title,
-                    "news_p" : news_p,
-                    "featured_image_url" : featured_image_url,
-                    "mars_facts" : mars_df,
-                    "hemisphere_image_urls": hemisphere_image_urls}
+    final_dict["news_title"] = news_title
+    final_dict["news_p"] = news_p
+    final_dict["featured_image_url"] = featured_image_url
+    final_dict["mars_facts"] = mars_df
+    final_dict["hemisphere_image_urls"] = hemisphere_image_urls
+    
+    browser.quit()
 
-return final_dict
+    return final_dict
