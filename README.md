@@ -1,6 +1,6 @@
 # web-scraping-challenge
 
-# MISSION TO MARS
+# MISSION TO MARS!!
 
 In this project, we will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what we need to do.
 
@@ -37,7 +37,7 @@ The following outlines what we need to scrape.
 * We click each of the links to the hemispheres in order to find the image url to the full resolution image and save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. We use a Python dictionary to store the data using the keys img_url and title and then append the dictionary to a list. This list will contain one dictionary for each hemisphere.
 
 
-## Step 2 - MONGODB AND FLASK APPLICATION
+## Step 2 - MongoDb and Flask Application
 
 We use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
