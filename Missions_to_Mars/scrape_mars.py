@@ -14,7 +14,10 @@ def init_browser():
 def scrape():
 
     browser = init_browser()
+
+    # Set an empty dictionary to hold final findings
     final_dict = {}
+    
     # NASA MARS NEWS
     # Set the featured image url and browser
     news_url = "https://mars.nasa.gov/news/"
@@ -72,6 +75,7 @@ def scrape():
     # Strip unwanted '/n' tags to clean up the table
     # mars_facts_html = mars_facts_html.replace('\n', '')
 
+
     # MARS HEMISPHERE
     # Set the featured image url and browser
     mars_hemi_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -98,12 +102,16 @@ def scrape():
                      "img_url" : img_url}
         hemisphere_image_urls.append(hemi_info_dict)
 
+
+    # Update the empty dictionary with the findings
     final_dict["news_title"] = news_title
     final_dict["news_p"] = news_p
     final_dict["featured_image_url"] = featured_image_url
     final_dict["mars_facts"] = mars_facts_html
     final_dict["hemisphere_image_urls"] = hemisphere_image_urls
     
+    # Close the browser after scraping
     browser.quit()
 
+    # Return results
     return final_dict
