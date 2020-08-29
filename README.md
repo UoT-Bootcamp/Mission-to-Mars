@@ -42,7 +42,7 @@ The following outlines what we need to scrape.
 
 <br/>
 
-![mars]()
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/mars_facts.png)
 
 <br/>
 
