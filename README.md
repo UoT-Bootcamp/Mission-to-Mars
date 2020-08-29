@@ -1,6 +1,11 @@
 # web-scraping-challenge
 
 # *Mission To MARS!!*
+<br/>
+
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/Image/mission_to_mars.png)
+
+<br/>
 
 In this project, we will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what we need to do.
 
