@@ -52,7 +52,7 @@ The following outlines what we need to scrape.
 * We click each of the links to the hemispheres in order to find the image url to the full resolution image and save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. We use a Python dictionary to store the data using the keys img_url and title and then append the dictionary to a list. This list will contain one dictionary for each hemisphere.
 
 <br/>
-
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/mars_hemisphere_title.png)
 ![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/mars_hemisphere_one.png)
 
 <br/>
