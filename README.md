@@ -18,24 +18,48 @@ The following outlines what we need to scrape.
 * We will collect latest News Title and Paragraph Text and will assign these informations to variables 'news_title' and 'news_p' respectively.
 * We use Splinter to navigate the website and scrape the required information.
 
+<br/>
+
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/latest_mars_news.png)
+
+<br/>
 
 ### JPL Mars Space Images - Featured Image
 
 * We will scrape this website for JPL Featured Space Image - https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars
 * We use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called featured_image_url.
 
+<br/>
+
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/featured_image.png)
+
+<br/>
 
 ### Mars Facts
 
 * We will visit Mars Facts webpage https://space-facts.com/mars/ and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 * We use Pandas to convert the data to a HTML table string.
 
+<br/>
+
+![mars]()
+
+<br/>
 
 ### Mars Hemispheres
 
 * We will visit the USGS Astrogeology site https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars to obtain high resolution images for each of Mar's hemispheres.
 * We click each of the links to the hemispheres in order to find the image url to the full resolution image and save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. We use a Python dictionary to store the data using the keys img_url and title and then append the dictionary to a list. This list will contain one dictionary for each hemisphere.
 
+<br/>
+
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/mars_hemisphere_one.png)
+
+<br/>
+
+![mars](https://github.com/UoT-Bootcamp/web-scraping-challenge/blob/master/Missions_to_Mars/screenshots/mars_hemisphere_two.png)
+
+<br/>
 
 ## Step 2 - MongoDb and Flask Application
 
