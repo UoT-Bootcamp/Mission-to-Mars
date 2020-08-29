@@ -14,6 +14,7 @@
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
     </div>
+    
     <div class = "container-fluid">
         <div class = "row">
             <div class = "col-md-12">
@@ -24,14 +25,15 @@
             </div>
         </div>
     </div>
+
+    <br>
     
     <div class = "container-fluid">
         <div class = "row">
             <div class = "col-md-8">
-                <div class = "card-body">
-                    <h3 class = "card-title"><strong>Featured Mars Image</strong></h3>
-                    <img class = "card-img-top" src = "{{ mars_data.featured_image_url }}" alt = "Featured Image of Mars">
-                </div>
+                    <h3><strong>Featured Mars Image</strong></h3>
+                    <br>
+                    <img src = "{{ mars_data.featured_image_url }}" alt = "Featured Image of Mars" style = "max-width: 900px; max-height: 500px">
             </div>
             <div class = "col-md-4">
                 <div class = "card-body">
@@ -44,6 +46,7 @@
     </div>
 
     <br>
+    <br>
     <h3 align = "center"><strong>Mars Hemisphere</strong></h3>
     <hr>
 
@@ -53,8 +56,8 @@
                 {% for data in mars_data.hemisphere_image_urls %}
                 <div class = "col-md-6">
                     <figure class = "figure"> 
-                        <img class = "figure-img img-fluid rounded" src = "{{ data.img_url }}" alt = "Featured Image of Mars">
-                        <figcaption class = "figure-caption" style="color:black"><strong>{{ data.title }}</strong></figcaption>
+                        <img class = "figure-img img-fluid rounded" src = "{{ data.img_url }}" alt = "Featured Image of Mars" style = "max-width: 600px; max-height: 600px; padding-left: 60px">
+                        <figcaption class = "figure-caption" style="color:black; padding-left: 60px"><strong>{{ data.title }}</strong></figcaption>
                     </figure>
                 </div>
                 {% endfor %}
