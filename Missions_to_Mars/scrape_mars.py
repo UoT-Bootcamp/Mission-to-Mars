@@ -68,7 +68,7 @@ def scrape():
     # Set the index to the 'Description' column
     mars_df = df.set_index(["Description"])
     # Generate HTML tables from the DataFrame
-    mars_facts_html = mars_df.to_html(header = False, index = False)
+    mars_facts_html = mars_df.to_html()
     # Strip unwanted '/n' tags to clean up the table
     # mars_facts_html = mars_facts_html.replace('\n', '')
 
