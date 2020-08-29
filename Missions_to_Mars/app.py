@@ -12,11 +12,6 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_facts_app"
 mongo = PyMongo(app)
 
 
-client = pymongo.MongoClient()
-db = client.mars_db
-collection = db.mars_facts
-
-
 @app.route("/scrape")
 def scrape():
 
