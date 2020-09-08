@@ -1,4 +1,3 @@
-# web-scraping-challenge
 
 # *Mission To MARS!!*
 <br/>
