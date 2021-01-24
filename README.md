@@ -6,7 +6,7 @@
 
 <br/>
 
-**[GitHub Pages Link](https://uot-bootcamp.github.io/Mssion-to-Mars/Missions_to_Mars/)**
+### Click to **[GitHub Pages Link](https://uot-bootcamp.github.io/Mssion-to-Mars/Missions_to_Mars/)** to see the webpage.
 
 
 In this project, we will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what we need to do.
